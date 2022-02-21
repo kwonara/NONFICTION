@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ol,ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{font-family: 'Baskervville', serif,"Nanum Gothic";}
+/*================header=================*/
+header{
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    color: #fff;
+    z-index: 1;
+}
+nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.gnb,
+.join{
+    display: flex;
+}
+.gnb > li,
+.join > li{
+    margin: 0 20px;
+}
+.toggle{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+.banner{
+    width: 100%;
+}
+.banner > video{
+    width:100%;
+}
+/*============about section=============*/
+#about{
+    max-width: 1200px;
+    margin: auto;
+    padding: 155px 0;
+}
+#about > .slideshow-container{
+    margin: auto;
+}
+#about .mySlides{
+    max-width: 1200px;
+    margin: auto;
+    position: relative; 
+}
+#about .mySlides > .slide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+}
+#about .mySlides .slidetext{
+    width: 50%;
+    text-align: center;
+    padding-right:20px;
+}
+#about .slideimg{
+    width:50%;
+}
+#about .mySlides .slidetext >h1{
+    font-size: 28px;
+    line-height: 2;
+}
+#about .mySlides .slidetext >h2{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+#about .mySlides .slidetext >p{
+    font-size: 16px;
+    line-height: 2;
+}
+
+#about .slideimg > img{width:100%;}
+
+/*dot버튼*/
+.dot{
+    cursor: pointer;
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    background-color: #bbb;
+    display: inline-block;
+    margin: 10px 5px 0;
+    transition: all 0.6s ease;
+}
+.active, 
+.dot:hover{
+    background-color: #717171;
+}
+/*fading애니메이션*/
+.fade{
+    animation: fade 1.5s;
+}
+@keyframes fade{
+    0%{opacity: 0.4;}
+    100%{opacity: 1;}
+}
+/*============bestseller section=============*/
+#bestseller{
+    max-width:1200px;
+    margin:auto;
+    overflow: hidden;
+}
+#bestseller > h1{
+    text-align: center;
+    font-size: 28px;
+    line-height: 135px;
+}
+
+#bestseller > .bestwrap{
+    width: 200%;
+    text-align: center;
+    display: flex;
+}
+#bestseller .bestbox{
+    width:12.5%;
+    padding:0 10px;
+}
+
+#bestseller .bestimg{
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+#bestseller .bestimg img{
+    width:100%;
+}
+#bestseller .besttext > h3{
+    font-size: 24px;
+    line-height: 1.5;
+}
+#bestseller .besttext > h4{
+    font-size: 18px;
+}
+#bestseller .besttext > .subtxt{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+#bestseller .besttext > .subtxt h5{
+    font-size: 20px;
+    font-weight: normal;
+}
+#bestseller .besttext > .bestline{
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+}
+#bestseller .besttext > p{
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 15px;
+}
+#bestseller .bestbtn{
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 50px;
+    background-color: transparent;
+}
+#bestseller .bestbtn:hover{
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+/*============SHOP section=============*/
+#shop{
+    width: 100%;
+    padding-top: 85px;
+}
+#shop > .shopwrap{
+    text-align: center;
+}
+#shop > h1{
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#shop > .shopwrap > .shopimg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+#shop > .shopwrap > .shopimg > li{
+    width: 33.3%;
+    padding:0px 10px;
+    margin-bottom: 20px;
+}
+#shop > .shopwrap > .shopimg > li img{
+    width:100%;
+}
+/*============MEMBERSHIP section=============*/
+#Holiday{
+    width: 100%;
+    height: 1080px;
+    background: url(img/bg.jpeg)center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    padding:0 20px;
+    
+    display:flex;
+    align-items: center;
+}
+#Holiday > .holidayWrap{
+    width:100%;
+    max-width: 1200px;
+    height: 720px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    background-color: rgba(0,0,0,0.6);
+}
+#Holiday .play{
+    width:34%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+#Holiday .play video{
+    height:100%;
+    position:absolute;
+    top:0;
+    left:50%; transform:translateX(-50%);
+}
+#Holiday .holitext{
+    padding:0 10px;
+    width: 66%;
+    margin: auto;
+    text-align: center;
+}
+#Holiday .holitext> h1{
+    font-size: 28px;
+    line-height: 2;
+}
+#Holiday .holitext > h2{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+#Holiday .holitext > p{
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+#Holiday .holiyBtn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+#Holiday .holiyBtn:hover{
+    background-color: rgba(225,225,225,0.1);
+    cursor: pointer;
+}
+/*============store=============*/
+#store{
+    width: 100%;
+    padding-top: 85px;
+    overflow: hidden;
+}
+#store > h1{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+#store > .storeWrap{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+#store > .storeWrap > .storeBox{
+    width:33.33%;
+    outline: 1px solid rgba(0,0,0,0.2);
+    padding: 5px;
+}
+#store > .storeWrap > .storeBox > img{
+    width:100%;
+}
+#store .storeBox h4{
+    text-align: center;
+    font-size: 18px;
+    line-height: 100px;
+}
+#store .storeBox p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+#store .storeBox p+p{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#store .storeBox > iframe{
+    width:100%;
+    height: 300px;
+}
+/*============contact section=============*/
+#contact{
+    width: 100%;
+    height: 900px;
+    padding-top: 85px;
+    border-bottom: 1px solid #666;
+}
+#contact > h1{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#contact > .subinfo{
+    text-align: center;
+    margin-bottom: 80px;
+}
+#contact > .contWrap{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    padding:0 20px;
+}
+#contact .contText{
+    width: 50%;
+    font-size: 18px;
+    padding-top: 20px;
+}
+#contact .contText li {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+#contact .contText li > b{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#contact .contText hr{
+    width: 300px;
+    margin-bottom: 20px;
+}
+#contact form{
+    width:50%;
+}
+#contact h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#contact input[type=text],
+#contact input[type=submit]{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    text-indent: 10px;
+    cursor: pointer;
+}
+#contact input[type=submit]:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+#contact textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/*===================footer===================*/
+footer{
+    width: 100%;
+    height: 85px;
+}
+footer > .footerBox{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+footer > .footerBox > .btlogo{
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+footer > .footerBox > .info > p{
+    line-height: 2;
+}
+footer > .footerBox > .sns{
+    font-size: 24px;
+    color: rgba(0,0,0,0.6);
+}
+footer > .footerBox > .sns > i{
+    margin-left: 10px;
+}
+/*============popup=============*/
+.modal{
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.modal-content{
+    width:500px;
+    background-color:#fff;
+    margin:auto;
+    border-radius: 15px;
+    padding: 30px;
+}
+form{
+    width: 50%;
+}
+.login{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+.login > img{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.login > h1{
+    text-align: center;
+    margin-right: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.modal > .modal-content > .login > form > input[type=text],
+.modal > .modal-content > .login > form > input[type=password]{
+    width:400px;
+    height:50px;
+    margin-bottom: 10px;
+    text-indent: 20px;
+    display: block;
+}
+.modal > .modal-content > .login > form > input[type=password]{
+    margin-bottom: 30px;
+}
+.login > form > a{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+input[type=submit]{
+    width:400px;
+    height:50px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 30px;
+}
+form > .txt{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+form > .joinBtn{
+    width:400px;
+    height:50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+}
+form > .mdline{
+    width: 400px;
+    color: #333;
+    margin: 20px 0;
+}
+form .signBtn{
+    display: flex;
+}
+form > .sign > p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+form > .sign > .signBtn > button{
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #999; 
+    border-left: none;
+    outline: none;
+    padding: 10px 55px;
+    background-color: transparent;
+}
+form > .sign > .signBtn > button:first-child{
+    border-left: 1px solid #999; 
+}    
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover{
+    color: #000;
+}
+
+/*=========================================*/
+@media screen and (max-width:1000px){/*1000px이하에서 글자가 너무 커서 틀어져요*/
+    #bestseller .besttext > h3{
+        font-size: 20px;
+    }
+    #bestseller .besttext > h4{
+        font-size: 16px;
+    }
+    #bestseller .besttext > .subtxt h5{
+        font-size: 14px;
+    }
+    #bestseller .besttext > p{
+        font-size: 12px;
+    }
+}
+
+/*768이하*/
+@media screen and (max-width:768px){
+    nav{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.39% 3.125%;
+    }
+    .gnb,
+    .join{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gnb > li,
+    .join > li{
+        text-align: center;
+    }
+    .toggle{
+        display: block;
+    }
+    .gnb.active,
+    .join.active{
+        display: flex;
+    }
+    .banner video{
+        width: 100%;
+        height: auto;
+        margin-top: 8.463%;
+    }
+    /*=========================*/
+    #about{
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+    #about .mySlides{
+        width: 100%; 
+    }
+    #about .mySlides > .slide{
+        width: 100%;
+        flex-direction: column;
+    }
+    #about .mySlides .slidetext{
+        width:100%;
+        padding:0;
+        margin: auto;
+    }
+    #about .mySlides .slidetext > h2{
+        padding-bottom: -20px;
+    }
+    #about .mySlides .slidetext > p{
+        font-size: 14px;
+    }
+    #about .mySlides .slideimg{
+        margin:20px auto 0;
+    }
+       /*=========================*/   
+    #bestseller > h1{
+        padding-top: 30px;
+    }
+    #bestseller > .bestwrap{
+        width: 400%;
+    }
+    
+    /*=========================*/  
+    #shop{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        padding-bottom: 80px;
+    }
+    #shop > h1{
+        margin-bottom: 0;
+        padding: 80px 0 50px 0;
+    }
+    #shop > .shopwrap{
+        width: 100%;
+    }
+
+    #shop > .shopwrap > .shopimg > li{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+    /*=========================*/
+    #Holiday{
+        width: 100%;
+        height: 432px;
+    }
+    #Holiday > .holidayWrap{
+        width: 78%;
+        height: 330px;
+    }
+    
+    #Holiday .holitext> h1{
+        font-size: 18px;
+        line-height: 2;
+    }
+    #Holiday .holitext > h2{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #Holiday .holitext > p{
+        font-size: 10px;
+        line-height: 2;
+        margin-bottom: 20px;
+    }
+    #Holiday .holiyBtn{
+        width: 250px;
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+    /*=========================*/
+    #store{
+        width: 100%;
+        height: auto;
+    }
+    #store > .storeWrap{
+        width: 99%;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #store > .storeWrap > .storeBox{
+        width:100%;
+        height:200px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    #store > .storeWrap > .storeBox > img {
+        width: 50%;
+    }
+    #store .storeText{
+        width:50%;
+    }
+    #store .storeBox > iframe{/*작은화면에서 지도를 제거하는게 좋을거 같아요*/
+        display:none;
+    }
+    #store .storeBox h4{
+        font-size: 18px;
+        line-height: 80px;
+    }
+    #store .storeBox p{
+        font-size: 16px;
+    }
+    #store .storeBox p+p{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    /*=========================*/
+    #contact{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    #contact > h1{
+        margin: 80px 0 20px 0;
+    }
+    #contact > .subinfo{
+        margin-bottom: 30px;
+    }
+    #contact .contWrap{
+        width: 99%;
+        flex-direction: column;
+    }
+    #contact .contText{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    #contact .contText > .ul{
+        width: 50%;
+    }
+
+    #contact .contText li:last-child{display: none;}
+    #contact .contText hr{display: none;}
+
+    #contact form{
+        margin: auto;
+        width: 600px;
+        padding-bottom: 50px;
+    }
+    /*=========================*/
+    footer{
+        width: 100%;
+    }
+    footer > .footerBox{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    footer > .footerBox > .btlogo{
+        font-size: 24px;
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+    footer > .footerBox > .info > p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:480px){
+    #about .mySlides .slidetext > h2{
+        margin-bottom: 30px;
+    }
+    #about .mySlides .slidetext > p{
+        margin-bottom: 30px;
+    }
+    .banner video{
+        width: 100%;
+        height: auto;
+        margin-top: 12.5%;
+    }
+    /*===================================*/
+    #bestseller > .bestwrap{
+        width: 400%;
+        height: 440px;
+    }
+    #bestseller .besttext > p{display: none;}
+    /*===================================*/
+    #Holiday > .holidayWrap{
+        width: 88%;
+        height: 330px;
+    }
+    #Holiday .holitext> h1{font-size: 16px;}
+    #Holiday .holitext > p+p{display: none;}
+    #Holiday .holiyBtn{
+        width: 80%;
+        font-size: 10px;
+        padding: 10px 5px;
+    }
+    /*===================================*/
+    #store .storeBox h4{
+        font-size: 16px;
+        line-height: 80px;
+    }
+    #store .storeBox p{
+        font-size: 14px;
+    }
+    #store .storeBox p+p{
+        margin-top: 18px;
+    }
+    /*===================================*/
+    #contact > .subinfo,
+    #contact h3{
+        font-size: 14px;
+        text-align: center;
+    }
+    #contact .contText li{
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    #contact .contText li > b{
+        font-size: 16px;
+    }
+    #contact form{
+        margin: auto;
+        width: 400px;
+        padding-bottom: 50px;
+    }
+}
